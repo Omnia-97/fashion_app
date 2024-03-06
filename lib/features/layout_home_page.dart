@@ -21,7 +21,7 @@ class LayoutHomePage extends StatelessWidget {
         ),
         actions: const [
           Padding(
-            padding: const EdgeInsets.only(right: 24),
+            padding: EdgeInsets.only(right: 24),
             child: Row(
               children: [
                 ImageIcon(
@@ -45,7 +45,7 @@ class LayoutHomePage extends StatelessWidget {
           Container(
             width: 556,
             height: 620,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.transparent,
               image: DecorationImage(
                   image: AssetImage('assets/images/home_images/img_banner.png'),
@@ -74,24 +74,30 @@ class LayoutHomePage extends StatelessWidget {
                     width: 265,
                     height: 40,
                     child: ElevatedButton(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: AppTheme.blackTitleColor.withOpacity(.4),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(30),
-                          ),
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor:
+                            AppTheme.blackTitleColor.withOpacity(.4),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
                         ),
-                        onPressed: () {},
-                        child: Text(
-                          'EXPLORE COLLECTION',
-                          style: theme.textTheme.bodyLarge!.copyWith(
-                            color: AppTheme.offWhiteColor,
-                          ),
-                        ),),
+                      ),
+                      onPressed: () {},
+                      child: Text(
+                        'EXPLORE COLLECTION',
+                        style: theme.textTheme.bodyLarge!.copyWith(
+                          color: AppTheme.offWhiteColor,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(bottom: 0),
-                  child: ImageIcon(AssetImage('assets/icons/ic_indicator.png'), color: AppTheme.offWhiteColor,size: 50,),
+                const Padding(
+                  padding: EdgeInsets.only(bottom: 0),
+                  child: ImageIcon(
+                    AssetImage('assets/icons/ic_indicator.png'),
+                    color: AppTheme.offWhiteColor,
+                    size: 50,
+                  ),
                 ),
               ],
             ),
